@@ -1,4 +1,4 @@
-# Datacamp
+# Datacamp (video nào nặng quá up lên ziu túp)
 ---
 # Chuyên mục: Day By Day của (T-ara) ! [Link](https://youtu.be/-4MlN-imvck?si=fOEZqhy8dE_b1InV) :3
 <details open="" align="left">
