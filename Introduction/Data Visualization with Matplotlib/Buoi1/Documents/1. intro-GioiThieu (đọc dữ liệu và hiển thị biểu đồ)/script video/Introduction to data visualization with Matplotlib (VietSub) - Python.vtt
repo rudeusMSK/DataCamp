@@ -1,0 +1,197 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.560
+Xin chào và chào mừng bạn đến với khóa học này về trực quan hóa dữ liệu với Matplotlib!
+
+4
+00:00:08.599 --> 00:00:12.000
+Một bưc tranh đang gia ngan lơi noi.
+
+5
+00:00:12.000 --> 00:00:18.719
+Trực quan hóa dữ liệu cho phép bạn rút ra thông tin chi tiết từ dữ liệu và cho phép bạn giao tiếp về dữ liệu với những người khác.
+
+8
+00:00:20.079 --> 00:00:28.519
+Ví dụ: hình ảnh trực quan này cho thấy lịch sử sinh động về đợt bùng phát dịch Ebola ở Tây Phi.
+
+9
+00:00:28.519 --> 00:00:34.320
+Lượng thông tin trong hình ảnh phức tạp này đơn giản là đáng kinh ngạc!
+
+12
+00:00:34.320 --> 00:00:42.200
+Hình ảnh trực quan này được tạo bằng Matplotlib, một thư viện Python được sử dụng rộng rãi để trực quan hóa dữ liệu.
+
+13
+00:00:42.200 --> 00:00:45.759
+Có nhiều thư viện phần mềm trực quan hóa dữ liệu.
+
+14
+00:00:45.759 --> 00:00:53.159
+Một trong những ưu điểm chính của Matplotlib là nó cho phép bạn kiểm soát hoàn toàn các thuộc tính của cốt truyện.
+
+15
+00:00:53.159 --> 00:00:59.960
+Điều này cho phép bạn tùy chỉnh và kiểm soát các thuộc tính chính xác của hình ảnh trực quan của mình.
+
+18
+00:00:59.960 --> 00:01:06.000
+Khi kết thúc khóa học này, bạn sẽ không chỉ biết cách kiểm soát hình ảnh trực quan của mình,
+
+19
+00:01:06.000 --> 00:01:12.319
+mà còn cả cách tạo các chương trình tự động tạo trực quan hóa dựa trên dữ liệu của bạn.
+
+22
+00:01:14.359 --> 00:01:17.599
+Có nhiều cách khác nhau để sử dụng Matplotlib.
+
+23
+00:01:17.599 --> 00:01:22.840
+Trong khóa học này, chúng ta sẽ sử dụng giao diện hướng đối tượng chính.
+
+24
+00:01:22.840 --> 00:01:28.319
+Giao diện này được cung cấp thông qua mô hình con pyplot.
+
+25
+00:01:28.319 --> 00:01:31.879
+Ở đây, chúng tôi nhập mô hình con này và đặt tên là plt.
+
+26
+00:01:31.879 --> 00:01:38.280
+Mặc dù việc sử dụng tên plt là không cần thiết để chương trình hoạt động, điều này
+
+27
+00:01:38.280 --> 00:01:44.280
+là một quy ước được tuân thủ rất mạnh mẽ và chúng tôi cũng sẽ tuân theo quy ước này tại đây.
+
+30
+00:01:44.280 --> 00:01:49.640
+Lệnh plt-dot-subplots, khi được gọi mà không có bất kỳ đầu vào nào,
+
+31
+00:01:49.640 --> 00:01:56.560
+tạo hai đối tượng khác nhau: đối tượng Hình và đối tượng Trục.
+
+34
+00:01:56.560 --> 00:02:01.560
+Đối tượng Hình là một vùng chứa chứa mọi thứ mà bạn nhìn thấy trên trang.
+
+37
+00:02:02.799 --> 00:02:08.120
+Trong khi đó, Trục là một phần của trang chứa dữ liệu.
+
+38
+00:02:08.120 --> 00:02:12.639
+Đó là khung vẽ mà chúng tôi sẽ vẽ bằng dữ liệu của mình để trực quan hóa nó.
+
+41
+00:02:14.240 --> 00:02:18.079
+Tại đây, bạn có thể thấy một Hình với các Trục trống.
+
+42
+00:02:18.079 --> 00:02:19.599
+Chưa có dữ liệu nào được thêm vào.
+
+45
+00:02:21.199 --> 00:02:23.599
+Hãy thêm một số dữ liệu vào hình của chúng tôi.
+
+46
+00:02:23.599 --> 00:02:24.319
+Đây là một số dữ liệu.
+
+47
+00:02:24.319 --> 00:02:28.879
+Đây là một DataFrame chứa thông tin về
+
+48
+00:02:28.879 --> 00:02:33.719
+thời tiết ở thành phố Seattle vào các tháng khác nhau trong năm.
+
+51
+00:02:33.719 --> 00:02:38.439
+Cột "THÁNG" chứa tên ba chữ cái của các tháng trong năm.
+
+54
+00:02:40.120 --> 00:02:44.280
+Cột "nhiệt độ bình thường trung bình hàng tháng" chứa
+
+55
+00:02:44.280 --> 00:02:50.599
+nhiệt độ trong những tháng này, tính bằng độ F, trung bình trong khoảng thời gian mười năm.
+
+58
+00:02:50.599 --> 00:02:56.079
+Để thêm dữ liệu vào các Trục, chúng tôi gọi một lệnh vẽ đồ thị.
+
+59
+00:02:56.079 --> 00:03:01.120
+Các lệnh vẽ đồ thị là các phương thức của đối tượng Axes.
+
+60
+00:03:01.120 --> 00:03:06.840
+Ví dụ ở đây chúng ta gọi phương thức có tên là plot với cột tháng
+
+61
+00:03:06.840 --> 00:03:13.199
+làm đối số đầu tiên và cột nhiệt độ làm đối số thứ hai.
+
+62
+00:03:13.199 --> 00:03:19.159
+Cuối cùng, chúng ta gọi hàm plt-dot-show để hiển thị tác dụng của lệnh vẽ đồ thị.
+
+65
+00:03:19.159 --> 00:03:22.120
+Điều này thêm một dòng vào cốt truyện.
+
+66
+00:03:22.120 --> 00:03:28.319
+Kích thước ngang của ô đại diện cho các tháng theo chúng
+
+67
+00:03:28.319 --> 00:03:34.759
+thứ tự và độ cao của đường tại mỗi tháng biểu thị nhiệt độ trung bình.
+
+68
+00:03:34.759 --> 00:03:41.759
+Các xu hướng trong dữ liệu hiện rõ ràng hơn nhiều so với khi chỉ đọc nhiệt độ từ bảng.
+
+71
+00:03:43.360 --> 00:03:46.920
+Nếu muốn, bạn có thể thêm nhiều dữ liệu hơn vào biểu đồ.
+
+72
+00:03:46.920 --> 00:03:54.599
+Ví dụ: chúng tôi cũng có một bảng lưu trữ dữ liệu về nhiệt độ trung bình ở thành phố Austin, Texas.
+
+75
+00:03:54.599 --> 00:03:59.920
+Chúng tôi thêm những dữ liệu này vào các trục bằng cách gọi lại phương thức cốt truyện.
+
+78
+00:03:59.920 --> 00:04:05.120
+Đây là tất cả các mã để tạo ra con số này sẽ trông như thế nào.
+
+79
+00:04:05.120 --> 00:04:10.000
+Đầu tiên, chúng ta tạo các đối tượng Hình và Trục.
+
+80
+00:04:10.000 --> 00:04:17.079
+Chúng tôi gọi biểu đồ phương pháp Axes để thêm nhiệt độ Seattle trước, sau đó là nhiệt độ Austin vào Axes.
+
+81
+00:04:17.079 --> 00:04:21.079
+Cuối cùng, chúng tôi yêu cầu Matplotlib cho chúng tôi xem hình.
+
+84
+00:04:21.079 --> 00:04:23.279
+Bây giờ đến lượt bạn.
+
+85
+00:04:23.279 --> 00:04:33.079
+Trong các bài tập, bạn sẽ thực hành tạo một hình và các trục và thêm dữ liệu vào chúng.

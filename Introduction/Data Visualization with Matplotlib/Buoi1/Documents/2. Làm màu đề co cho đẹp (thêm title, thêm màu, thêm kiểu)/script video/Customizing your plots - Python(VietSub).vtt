@@ -1,0 +1,161 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.160
+Bây giờ bạn đã biết cách thêm dữ liệu vào một biểu đồ, hãy bắt đầu tùy chỉnh các biểu đồ của bạn.
+
+4
+00:00:09.160 --> 00:00:12.720
+Trước tiên, hãy tùy chỉnh giao diện của dữ liệu trong biểu đồ.
+
+7
+00:00:14.199 --> 00:00:20.719
+Đây là mã mà trước đây bạn đã sử dụng để vẽ biểu đồ dữ liệu về thời tiết ở Seattle.
+
+10
+00:00:20.760 --> 00:00:25.039
+Một trong những điều mà bạn có thể muốn cải thiện về cốt truyện này là
+
+11
+00:00:25.039 --> 00:00:32.600
+dữ liệu dường như là liên tục, nhưng nó thực sự chỉ được đo lường trong khoảng thời gian hàng tháng.
+
+12
+00:00:32.600 --> 00:00:37.840
+Một cách để chỉ ra điều này là thêm các điểm đánh dấu vào biểu đồ cho chúng ta biết vị trí
+
+13
+00:00:37.840 --> 00:00:43.240
+dữ liệu tồn tại và phần nào chỉ là các đường kết nối giữa các điểm dữ liệu.
+
+16
+00:00:45.000 --> 00:00:48.960
+Phương thức cốt truyện có một đối số từ khóa tùy chọn,
+
+17
+00:00:48.960 --> 00:00:58.840
+điểm đánh dấu, cho phép bạn cho biết rằng bạn quan tâm đến việc thêm điểm đánh dấu vào ô và cả loại điểm đánh dấu bạn muốn.
+
+18
+00:00:58.840 --> 00:01:06.120
+Ví dụ: chuyển ký tự viết thường "o" cho biết bạn muốn sử dụng các vòng tròn làm điểm đánh dấu.
+
+21
+00:01:07.959 --> 00:01:15.680
+Thay vào đó, nếu bạn chuyển một chữ cái viết thường "v", bạn sẽ nhận được các điểm đánh dấu có hình tam giác hướng xuống dưới.
+
+24
+00:01:15.680 --> 00:01:26.680
+Để xem tất cả các kiểu đánh dấu có thể có, bạn có thể truy cập trang này trong tài liệu trực tuyến Matplotlib.
+
+27
+00:01:26.680 --> 00:01:31.920
+Trong các phiên bản này của biểu đồ, dữ liệu được đo xuất hiện dưới dạng các điểm đánh dấu của một số
+
+28
+00:01:31.920 --> 00:01:39.479
+hình dạng, và rõ ràng hơn là các đường thẳng chỉ là các đường kết nối giữa chúng.
+
+31
+00:01:39.479 --> 00:01:46.039
+Nhưng bạn có thể đi xa hơn nữa để nhấn mạnh điều này bằng cách thay đổi hình thức của các đường kết nối này.
+
+34
+00:01:47.759 --> 00:01:52.759
+Điều này được thực hiện bằng cách thêm đối số từ khóa linestyle.
+
+35
+00:01:52.759 --> 00:01:58.879
+Ở đây, hai dấu gạch ngang được sử dụng để chỉ ra rằng dòng đó phải được gạch ngang.
+
+36
+00:01:58.879 --> 00:02:07.920
+Giống như các hình dạng của điểm đánh dấu, có một số kiểu đường kẻ mà bạn có thể chọn, được liệt kê trong trang tài liệu này.
+
+39
+00:02:07.920 --> 00:02:10.840
+Bạn thậm chí có thể đi xa đến mức loại bỏ
+
+40
+00:02:10.840 --> 00:02:16.920
+các dòng hoàn toàn, bằng cách chuyển chuỗi "Không" làm đầu vào cho đối số từ khóa này.
+
+43
+00:02:18.840 --> 00:02:24.400
+Cuối cùng, bạn có thể chọn màu mà bạn muốn sử dụng cho dữ liệu.
+
+46
+00:02:24.400 --> 00:02:32.560
+Ví dụ: ở đây chúng tôi đã chọn hiển thị dữ liệu này bằng màu đỏ, được biểu thị bằng chữ "r".
+
+49
+00:02:32.560 --> 00:02:37.319
+Một điều quan trọng khác để tùy chỉnh là các nhãn trục.
+
+50
+00:02:37.319 --> 00:02:44.360
+Nếu bạn muốn hình ảnh hóa của mình giao tiếp chính xác, bạn cần luôn gắn nhãn cho các trục.
+
+51
+00:02:44.360 --> 00:02:47.800
+Điều này thực sự quan trọng nhưng lại là thứ thường bị bỏ qua.
+
+54
+00:02:49.360 --> 00:02:57.400
+Ngoài phương thức cốt truyện, đối tượng Axes còn có một số phương thức bắt đầu bằng từ tập hợp.
+
+55
+00:02:57.400 --> 00:03:05.560
+Đây là những phương thức mà bạn có thể sử dụng để thay đổi một số thuộc tính của đối tượng, trước khi gọi show để hiển thị nó.
+
+58
+00:03:05.560 --> 00:03:18.360
+Ví dụ: có một phương thức set-underscore-xlabel mà bạn có thể sử dụng để đặt giá trị nhãn của trục x.
+
+59
+00:03:18.360 --> 00:03:24.840
+Lưu ý rằng chúng tôi viết hoa các nhãn trục giống như chúng tôi viết hoa một câu, trong đó chỉ chữ cái đầu tiên
+
+60
+00:03:24.840 --> 00:03:33.360
+từ luôn được viết hoa và các từ tiếp theo chỉ được viết hoa nếu chúng là danh từ riêng.
+
+63
+00:03:33.360 --> 00:03:38.960
+Sau đó, nếu bạn gọi plt-dot-show, bạn sẽ thấy rằng trục hiện có một
+
+64
+00:03:38.960 --> 00:03:44.360
+nhãn cho biết rằng các giá trị trên trục x biểu thị thời gian tính bằng tháng.
+
+67
+00:03:44.360 --> 00:03:54.599
+Tương tự, phương thức set-underscore-ylabel tùy chỉnh nhãn được liên kết với trục y.
+
+68
+00:03:54.599 --> 00:04:01.080
+Ở đây, chúng tôi đặt nhãn để chỉ ra rằng chiều cao của
+
+69
+00:04:01.080 --> 00:04:04.120
+dòng trong mỗi tháng cho biết nhiệt độ trung bình trong tháng đó.
+
+72
+00:04:06.360 --> 00:04:13.199
+Cuối cùng, bạn cũng có thể thêm tiêu đề vào Axes của mình bằng phương pháp set-underscore-title.
+
+73
+00:04:13.199 --> 00:04:20.759
+Điều này thêm một nguồn thông tin khác về dữ liệu để cung cấp ngữ cảnh cho hình ảnh của bạn.
+
+76
+00:04:20.759 --> 00:04:22.920
+ĐƯỢC RỒI.
+
+77
+00:04:22.920 --> 00:04:27.759
+Bây giờ bạn đã thấy một số ví dụ về việc tùy chỉnh giao diện của dữ liệu trong
+
+78
+00:04:27.759 --> 00:04:36.519
+đồ thị của bạn và các nhãn trục, đã đến lúc thực hành một chút với các khái niệm này.
