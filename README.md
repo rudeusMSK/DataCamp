@@ -20,5 +20,8 @@ thành wả -⁠ ＜(´⌯  ̫⌯`)＞:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c70e5abf-da77-4189-88c1-15f73a83bea7" width="600"/>
 </p>
-
+3. làm màu đủ thứ !  (-⁠﹏⁠-)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/097a0094-6294-4b4c-9eeb-bb72cc16a30c" width="600"/>
+</p>
 </details>
