@@ -1,9 +1,10 @@
 # Datacamp (video nào nặng quá up lên ziu túp)
 ---
 # Chuyên mục: Day By Day của (T-ara) ! [Link](https://youtu.be/-4MlN-imvck?si=fOEZqhy8dE_b1InV) :3
+ <p align="center"><img src="https://github.com/user-attachments/assets/b02cb997-a99c-439f-bd95-6eead1b92bed" width="100"/></p>
 <details lose="" align="left">
   <summary>  
-  - Day1: <p align="center"><img src="https://github.com/user-attachments/assets/b02cb997-a99c-439f-bd95-6eead1b92bed" width="100"/></p>
+  - Day1:
   </summary>
   <br>
 1. biểu đồ ko có data: -⁠ ฅ^•ﻌ•^ฅ
@@ -31,9 +32,8 @@ thành wả -⁠ ＜(´⌯  ̫⌯`)＞:
   - Day2:
   </summary>
   <br>
-
-<p align="center">CHAPTER 2</p>
-
+<p align="center"> CHAPTER 2 </p>
+  
 <details lose="" align="left">
   <summary>  
    # Exercise 1:
@@ -49,7 +49,9 @@ Don't forget to check out the [Matplotlib](https://res.cloudinary.com/dyd911kmh/
 Import the pandas library as `pd` .
 
 . Read in the data from a CSV file called `'climate_change.csv'` using `pd.read_csv`.
+
 . Use the `parse_dates` key-word argument to parse the `"date"` column as dates.
+
 . Use the `index_col` key-word argument to set the `"date"` column as the index.
 
 code:
@@ -62,6 +64,45 @@ climate_change = pd.read_csv('climate_change.csv', parse_dates=["date"], index_c
 ```
 </details>
 
+<details lose="" align="left">
+  <summary>  
+   # Exercise 2:
+  </summary>
+<h1> Plot time-series data </h1>  
+  
+To plot time-series data, we use the `Axes` object `plot` command. The first argument to this method are the values for the x-axis and the second argument are the values for the y-axis.
 
+This exercise provides data stored in a DataFrame called `climate_change`. This variable has a time-index with the dates of measurements and two data columns: `"co2"` and `"relative_temp"`.
+
+In this case, the index of the DataFrame would be used as the x-axis values and we will plot the values stored in the `"relative_temp"` column as the y-axis values. We will also properly label the x-axis and y-axis.
+<h1> Instructions </h1> 
+
+Import the pandas library as `pd` .
+  
+  . Add the data from `climate_change` to the plot: use the DataFrame `index` for the x value and the `"relative_temp"` column for the y values.
+  
+  . Set the x-axis label to `'Time'`.
+  
+  . Set the y-axis label to `'Relative temperature (Celsius)'`.
+  
+  . Show the figure.
+code:
+```python
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots()
+
+# Add the time-series for "relative_temp" to the plot
+ax.plot(climate_change.index, climate_change['relative_temp'])
+
+# Set the x-axis label
+ax.set_xlabel('Time')
+
+# Set the y-axis label
+ax.set_ylabel('Relative temperature (Celsius)')
+
+# Show the figure
+plt.show()
+```
+</details>
 
 </details>
