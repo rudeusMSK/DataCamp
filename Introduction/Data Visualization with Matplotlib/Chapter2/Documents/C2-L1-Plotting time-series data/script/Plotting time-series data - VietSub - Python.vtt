@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.200
+Nhiều loại dữ liệu được tổ chức như
+
+2
+00:00:05.200 --> 00:00:14.519
+chuỗi thời gian và trực quan hóa chuỗi thời gian là một công cụ tuyệt vời để phát hiện các mẫu trong dữ liệu.
+
+5
+00:00:14.560 --> 00:00:17.960
+Ví dụ: bộ dữ liệu thời tiết mà chúng tôi đã sử dụng trong
+
+6
+00:00:17.960 --> 00:00:24.839
+chương trước là một ví dụ tương đối đơn giản về dữ liệu chuỗi thời gian.
+
+7
+00:00:24.839 --> 00:00:29.879
+Các biến liên tục, chẳng hạn như lượng mưa hoặc nhiệt độ là
+
+8
+00:00:29.879 --> 00:00:35.560
+được tổ chức trong bảng dữ liệu của chúng tôi theo một biến thời gian, các tháng trong năm.
+
+11
+00:00:37.759 --> 00:00:45.960
+Trong chương này, chúng ta sẽ đi sâu hơn vào việc sử dụng Matplotlib để trực quan hóa dữ liệu chuỗi thời gian.
+
+14
+00:00:46.000 --> 00:00:50.240
+Hãy xem xét một tập dữ liệu phức tạp hơn, có chứa
+
+15
+00:00:50.240 --> 00:00:56.119
+ghi chép về sự thay đổi của khí hậu trong nửa thế kỷ qua.
+
+18
+00:00:56.119 --> 00:01:00.799
+Dữ liệu nằm trong tệp CSV có ba cột.
+
+19
+00:01:00.799 --> 00:01:09.200
+Cột "ngày" cho biết thời điểm ghi âm được thực hiện và được lưu trữ ở định dạng năm-tháng-ngày.
+
+20
+00:01:09.200 --> 00:01:18.840
+Phép đo được thực hiện vào ngày 6 hàng tháng từ năm 1958 đến năm 2016.
+
+21
+00:01:18.840 --> 00:01:27.359
+Cột "co2" chứa các phép đo carbon dioxide trong khí quyển.
+
+22
+00:01:27.359 --> 00:01:34.680
+Con số hiển thị trong mỗi hàng là phần triệu của carbon dioxide.
+
+23
+00:01:34.680 --> 00:01:41.799
+Cột "relative-underscore-temp" biểu thị nhiệt độ đo được vào ngày này,
+
+24
+00:01:41.799 --> 00:01:50.400
+so với đường cơ sở là nhiệt độ trung bình trong mười năm đầu tiên của phép đo.
+
+27
+00:01:50.479 --> 00:01:53.599
+Nếu chúng ta muốn gấu trúc nhận ra rằng đây là một
+
+28
+00:01:53.599 --> 00:01:59.280
+chuỗi thời gian, chúng ta sẽ cần yêu cầu nó phân tích cú pháp cột "ngày" thành một ngày.
+
+29
+00:01:59.280 --> 00:02:07.000
+Để sử dụng toàn bộ sức mạnh của cơ sở lập chỉ mục gấu trúc, chúng tôi cũng sẽ chỉ định
+
+30
+00:02:07.000 --> 00:02:13.560
+cột ngày làm chỉ mục của chúng tôi bằng cách sử dụng đối số từ khóa chỉ mục-gạch dưới-col.
+
+33
+00:02:15.520 --> 00:02:18.120
+Đây là chỉ mục của DataFrame của chúng tôi.
+
+34
+00:02:18.120 --> 00:02:25.840
+Đó là một đối tượng DateTime Index với 706 mục nhập, mỗi mục cho một phép đo.
+
+35
+00:02:25.840 --> 00:02:32.879
+Nó có kiểu dữ liệu DateTime và Matplotlib sẽ nhận ra rằng đây là biến đại diện cho thời gian.
+
+36
+00:02:32.879 --> 00:02:36.319
+Điều này sẽ quan trọng trong một chút.
+
+39
+00:02:36.319 --> 00:02:43.639
+Hai cột khác trong dữ liệu được lưu trữ dưới dạng các cột thông thường của DataFrame với một
+
+40
+00:02:43.639 --> 00:02:50.199
+kiểu dữ liệu dấu phẩy động, cho phép chúng ta tính toán trên chúng dưới dạng các biến liên tục.
+
+43
+00:02:52.079 --> 00:02:59.360
+Có một vài điểm trong dữ liệu CO2 được lưu trữ dưới dạng NaN hoặc Not-a-Number.
+
+44
+00:02:59.360 --> 00:03:02.800
+Đây là những giá trị bị thiếu khi các phép đo không được thực hiện.
+
+47
+00:03:02.800 --> 00:03:11.319
+Để bắt đầu vẽ biểu đồ dữ liệu, chúng tôi nhập Matplotlib và tạo Hình và Trục.
+
+50
+00:03:11.319 --> 00:03:14.360
+Tiếp theo, chúng tôi thêm dữ liệu vào cốt truyện.
+
+51
+00:03:14.360 --> 00:03:21.840
+Chúng tôi thêm chỉ mục của DataFrame cho trục x và cột "co2" cho trục y.
+
+52
+00:03:21.840 --> 00:03:26.240
+Chúng tôi cũng gắn nhãn các trục x và y.
+
+55
+00:03:26.240 --> 00:03:35.479
+Matplotlib tự động chọn hiển thị thời gian trên trục x dưới dạng năm, với khoảng thời gian là 10 năm.
+
+58
+00:03:35.479 --> 00:03:40.719
+Trực quan hóa dữ liệu kể một câu chuyện rõ ràng: có một số nhỏ theo mùa
+
+59
+00:03:40.719 --> 00:03:46.439
+dao động về lượng CO2 đo được và sự gia tăng tổng thể về lượng
+
+60
+00:03:46.439 --> 00:03:53.960
+của CO2 trong khí quyển từ khoảng 320 phần triệu đến khoảng 400 phần triệu.
+
+63
+00:03:53.960 --> 00:04:00.840
+Chúng tôi có thể chọn một thập kỷ dữ liệu bằng cách cắt vào DataFrame bằng hai
+
+64
+00:04:00.840 --> 00:04:06.719
+các chuỗi phân định ngày bắt đầu và ngày kết thúc của khoảng thời gian mà chúng tôi quan tâm.
+
+67
+00:04:06.719 --> 00:04:17.680
+Khi chúng tôi làm điều đó, chúng tôi nhận được cốt truyện của một phần của chuỗi thời gian bao gồm dữ liệu chỉ có giá trị mười năm.
+
+68
+00:04:17.680 --> 00:04:26.360
+Matplotlib hiện cũng biết gắn nhãn các dấu tick trên trục x theo năm, với khoảng thời gian là một năm giữa các dấu tick.
+
+71
+00:04:26.360 --> 00:04:32.519
+Nhìn vào dữ liệu này, bạn cũng sẽ nhận thấy rằng các giá trị còn thiếu trong
+
+72
+00:04:32.519 --> 00:04:40.360
+chuỗi thời gian này được biểu thị dưới dạng các ngắt trong dòng được vẽ bởi Matplotlib.
+
+75
+00:04:40.360 --> 00:04:45.800
+Phóng to hơn nữa, chúng ta có thể chọn dữ liệu từ một năm.
+
+76
+00:04:45.800 --> 00:04:51.240
+Bây giờ trục x tự động biểu thị các tháng trong năm đó.
+
+79
+00:04:51.240 --> 00:05:01.720
+Trước khi tiếp tục, hãy thực hành lập chỉ mục và vẽ biểu đồ dữ liệu chuỗi thời gian.

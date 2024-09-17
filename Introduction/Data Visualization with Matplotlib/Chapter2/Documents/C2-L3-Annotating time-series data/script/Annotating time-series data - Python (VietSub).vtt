@@ -1,0 +1,161 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.560
+Một cách quan trọng để tăng cường trực quan hóa là thêm chú thích.
+
+2
+00:00:08.560 --> 00:00:14.119
+Chú thích thường là những đoạn văn bản nhỏ đề cập đến một phần cụ thể của
+
+3
+00:00:14.119 --> 00:00:19.679
+trực quan hóa, tập trung sự chú ý của chúng tôi vào một số tính năng của dữ liệu và giải thích tính năng này.
+
+6
+00:00:21.320 --> 00:00:27.679
+Ví dụ, hãy xem xét dữ liệu mà chúng ta đã xem trong các video trước trong chương này.
+
+7
+00:00:27.679 --> 00:00:33.880
+Dữ liệu này cho thấy mức độ carbon dioxide đo được trong khí quyển trong một khoảng thời gian
+
+8
+00:00:33.880 --> 00:00:42.119
+hơn 50 năm có màu xanh lam và nhiệt độ tương đối trong cùng khoảng thời gian có màu đỏ.
+
+11
+00:00:42.119 --> 00:00:52.039
+Đó là rất nhiều dữ liệu và khi trình bày nó, bạn có thể muốn tập trung sự chú ý vào một khía cạnh cụ thể của dữ liệu này.
+
+14
+00:00:52.159 --> 00:00:57.320
+Một cách để thu hút sự chú ý đến một phần của cốt truyện là chú thích nó.
+
+15
+00:00:57.320 --> 00:01:06.000
+Điều này có nghĩa là vẽ một mũi tên chỉ vào một phần của cốt truyện và có thể bao gồm văn bản để giải thích nó.
+
+18
+00:01:06.120 --> 00:01:10.960
+Ví dụ: giả sử rằng chúng tôi nhận thấy rằng ngày đầu tiên mà
+
+19
+00:01:10.960 --> 00:01:18.799
+nhiệt độ tương đối vượt quá 1 độ C là ngày 6 tháng 10 năm 2015.
+
+20
+00:01:18.799 --> 00:01:21.960
+Chúng tôi muốn chỉ ra điều này trong cốt truyện.
+
+23
+00:01:21.960 --> 00:01:30.239
+Một lần nữa, đây là mã tạo biểu đồ, sử dụng chức năng mà chúng tôi đã triển khai trước đó.
+
+26
+00:01:30.280 --> 00:01:36.640
+Tiếp theo, chúng ta gọi một phương thức của đối tượng Axes được gọi là annotate.
+
+29
+00:01:36.640 --> 00:01:42.680
+Ít nhất, hàm này lấy văn bản chú thích làm đầu vào, trong trường hợp này
+
+30
+00:01:42.680 --> 00:01:51.879
+case, chuỗi ">1 độ" và tọa độ xy mà chúng tôi muốn chú thích.
+
+33
+00:01:51.879 --> 00:01:59.039
+Ở đây, giá trị để chú thích có vị trí x của Dấu thời gian của ngày đó.
+
+34
+00:01:59.039 --> 00:02:03.879
+Chúng tôi sử dụng đối tượng dấu thời gian của gấu trúc để xác định điều đó.
+
+35
+00:02:03.879 --> 00:02:10.039
+Vị trí y của dữ liệu là 1, là giá trị 1 độ C tại ngày đó.
+
+38
+00:02:10.039 --> 00:02:13.560
+Nhưng điều này không có vẻ tuyệt vời.
+
+39
+00:02:13.560 --> 00:02:17.000
+Văn bản xuất hiện trên đầu nhãn đánh dấu trục.
+
+40
+00:02:17.000 --> 00:02:19.079
+Có lẽ chúng ta có thể di chuyển nó đến một nơi khác?
+
+43
+00:02:19.079 --> 00:02:31.120
+Phương thức chú thích lấy một đối số văn bản xy tùy chọn để chọn vị trí xy của văn bản.
+
+44
+00:02:31.120 --> 00:02:36.560
+Sau một số thử nghiệm, chúng tôi nhận thấy rằng giá trị x của ngày 6 tháng 10,
+
+45
+00:02:36.560 --> 00:02:44.719
+2008 và giá trị y là âm 0-điểm-2 độ là một vị trí tốt để đặt văn bản.
+
+48
+00:02:44.719 --> 00:02:52.439
+Vấn đề bây giờ là không có cách nào để xem điểm dữ liệu nào là điểm đang được chú thích.
+
+51
+00:02:54.000 --> 00:02:59.479
+Hãy thêm một mũi tên kết nối văn bản với dữ liệu.
+
+54
+00:02:59.479 --> 00:03:05.360
+Để kết nối giữa văn bản chú thích và dữ liệu được chú thích, chúng ta có thể thêm một mũi tên.
+
+55
+00:03:05.360 --> 00:03:14.400
+Đối số từ khóa để thực hiện điều này được gọi là arrowprops, viết tắt của arrow properties.
+
+58
+00:03:14.400 --> 00:03:20.199
+Đối số từ khóa này lấy đầu vào là một từ điển
+
+59
+00:03:20.199 --> 00:03:26.079
+xác định các thuộc tính của mũi tên mà chúng tôi muốn sử dụng.
+
+60
+00:03:26.079 --> 00:03:34.360
+Nếu chúng ta chuyển một từ điển trống vào đối số từ khóa, mũi tên sẽ có các thuộc tính mặc định, như được hiển thị ở đây.
+
+63
+00:03:36.319 --> 00:03:40.280
+Chúng tôi cũng có thể tùy chỉnh sự xuất hiện của mũi tên.
+
+64
+00:03:40.280 --> 00:03:46.639
+Ví dụ: ở đây chúng tôi đặt kiểu mũi tên thành một đường mảnh với đầu rộng.
+
+65
+00:03:46.639 --> 00:03:52.520
+Đó là ý nghĩa của chuỗi có dấu gạch ngang và dấu nhỏ hơn.
+
+66
+00:03:52.520 --> 00:03:56.639
+Chúng tôi cũng đặt màu thành màu xám.
+
+67
+00:03:56.639 --> 00:03:59.520
+Đây là một chút tinh tế hơn.
+
+70
+00:03:59.520 --> 00:04:04.599
+Có nhiều tùy chọn hơn để tùy chỉnh các thuộc tính mũi tên và các tùy chọn khác
+
+71
+00:04:04.599 --> 00:04:11.000
+thuộc tính của chú thích mà bạn có thể đọc trong tài liệu Matplotlib tại đây.
+
+74
+00:04:11.000 --> 00:04:19.839
+Nhưng bây giờ, hãy bắt đầu bằng cách thực hành những gì bạn đã học được cho đến nay.

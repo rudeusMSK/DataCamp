@@ -1,0 +1,189 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.199
+Để liên hệ hai chuỗi thời gian trùng nhau về thời gian của chúng, nhưng ghi lại
+
+2
+00:00:08.199 --> 00:00:15.599
+giá trị của các biến khác nhau, chúng ta có thể muốn vẽ chúng trên cùng một Trục.
+
+5
+00:00:15.599 --> 00:00:21.640
+Ví dụ: hãy xem xét DataFrame thay đổi khí hậu mà chúng ta đã thấy trước đây.
+
+8
+00:00:23.559 --> 00:00:28.399
+DataFrame này chứa hai biến được đo hàng tháng từ
+
+9
+00:00:28.399 --> 00:00:37.840
+1958 đến 2016: mức độ carbon dioxide và nhiệt độ tương đối.
+
+12
+00:00:37.880 --> 00:00:46.600
+Như trước đây, chúng ta có thể tạo Hình và Trục và thêm dữ liệu từ một biến vào biểu đồ.
+
+13
+00:00:46.600 --> 00:00:51.079
+Và chúng ta có thể thêm dữ liệu từ biến khác vào biểu đồ.
+
+16
+00:00:51.079 --> 00:00:53.759
+Chúng tôi cũng thêm nhãn trục và hiển thị cốt truyện.
+
+19
+00:00:55.679 --> 00:00:57.560
+Nhưng điều này có vẻ không ổn.
+
+20
+00:00:57.560 --> 00:01:05.799
+Đường biểu thị lượng khí carbon dioxide đã dịch chuyển lên trên và đường biểu thị nhiệt độ tương đối trông hoàn toàn bằng phẳng.
+
+21
+00:01:05.799 --> 00:01:12.319
+Vấn đề là thang đo cho hai phép đo này là khác nhau.
+
+24
+00:01:12.319 --> 00:01:18.599
+Bạn đã thấy cách bạn có thể vẽ các chuỗi thời gian này trong các ô con riêng biệt.
+
+25
+00:01:18.599 --> 00:01:26.480
+Ở đây, chúng ta sẽ vẽ chúng trong cùng một ô phụ, sử dụng hai tỷ lệ trục y khác nhau.
+
+28
+00:01:26.480 --> 00:01:31.120
+Một lần nữa, chúng tôi bắt đầu bằng cách thêm biến đầu tiên vào Axes của chúng tôi.
+
+31
+00:01:31.120 --> 00:01:37.319
+Sau đó, chúng tôi sử dụng phương pháp sinh đôi để tạo một cặp song sinh của Trục này.
+
+32
+00:01:37.319 --> 00:01:45.200
+Điều này có nghĩa là hai Trục chia sẻ cùng một trục x, nhưng các trục y thì riêng biệt.
+
+33
+00:01:45.200 --> 00:01:51.599
+Chúng tôi thêm biến khác vào đối tượng Axes thứ hai này và hiển thị hình.
+
+36
+00:01:51.599 --> 00:01:55.759
+Có một thang đo trục y ở bên trái, dành cho carbon dioxide
+
+37
+00:01:55.759 --> 00:02:02.640
+biến và một tỷ lệ trục y khác ở bên phải cho biến nhiệt độ.
+
+40
+00:02:02.640 --> 00:02:08.400
+Bây giờ bạn có thể thấy sự dao động của nhiệt độ rõ ràng hơn.
+
+43
+00:02:08.400 --> 00:02:11.000
+Nhưng điều này vẫn chưa hoàn toàn đúng.
+
+44
+00:02:11.000 --> 00:02:12.639
+Hai dòng có cùng màu.
+
+45
+00:02:12.639 --> 00:02:14.680
+Hãy lo việc đó.
+
+48
+00:02:14.680 --> 00:02:20.639
+Để tách các biến, chúng tôi sẽ mã hóa từng biến bằng một màu khác.
+
+51
+00:02:22.000 --> 00:02:29.800
+Chúng tôi thêm màu vào biến đầu tiên, sử dụng đối số từ khóa màu trong lời gọi hàm vẽ đồ thị.
+
+52
+00:02:29.800 --> 00:02:35.639
+Chúng tôi cũng đặt màu trong lệnh gọi của mình thành hàm set-underscore-ylabel.
+
+55
+00:02:35.639 --> 00:02:43.840
+Chúng tôi lặp lại điều này trong các lệnh gọi của mình để vẽ sơ đồ và đặt nhãn gạch dưới từ đối tượng Trục kép.
+
+58
+00:02:43.840 --> 00:02:48.280
+Trong hình kết quả, mỗi biến có màu riêng và
+
+59
+00:02:48.280 --> 00:02:55.240
+nhãn trục y cho chúng ta biết rõ thang đo nào thuộc về biến nào.
+
+62
+00:02:55.240 --> 00:03:00.879
+Chúng ta có thể làm cho mã hóa theo màu trở nên khác biệt hơn nữa bằng cách đặt không chỉ
+
+63
+00:03:00.879 --> 00:03:08.039
+màu của các nhãn trục y mà cả các nhãn đánh dấu trục y và các nhãn đánh dấu trục y.
+
+66
+00:03:08.039 --> 00:03:14.280
+Điều này được thực hiện bằng cách thêm lệnh gọi vào phương thức tick-underscore-params.
+
+67
+00:03:14.280 --> 00:03:22.039
+Phương thức này lấy y hoặc x làm đối số đầu tiên của nó, trỏ đến
+
+68
+00:03:22.039 --> 00:03:27.680
+thực tế là chúng tôi đang sửa đổi các tham số của dấu kiểm trục y và nhãn dấu kiểm.
+
+69
+00:03:27.680 --> 00:03:34.319
+Để thay đổi màu sắc của chúng, chúng tôi sử dụng đối số từ khóa màu sắc, đặt nó thành màu xanh lam.
+
+72
+00:03:34.319 --> 00:03:40.599
+Tương tự, chúng ta gọi phương thức tick-underscore-params từ
+
+73
+00:03:40.599 --> 00:03:45.560
+đối tượng Trục kép, thiết lập màu cho các dấu tích này thành màu đỏ.
+
+76
+00:03:45.560 --> 00:03:54.639
+Tô màu cả nhãn trục và các dấu tick để làm rõ tỷ lệ nào sẽ sử dụng với biến nào.
+
+79
+00:03:54.639 --> 00:03:57.719
+Đây có vẻ như là một mô hình hữu ích.
+
+80
+00:03:57.719 --> 00:04:03.960
+Trước khi tiếp tục, hãy triển khai chức năng này như một chức năng mà chúng ta có thể sử dụng lại.
+
+83
+00:04:05.360 --> 00:04:12.159
+Chúng tôi sử dụng từ khóa def để chỉ ra rằng chúng tôi đang xác định một hàm gọi là chuỗi thời gian cốt truyện-gạch dưới.
+
+84
+00:04:12.159 --> 00:04:20.360
+Hàm này lấy đối số là đối tượng Axes, các biến x và y để vẽ đồ thị,
+
+85
+00:04:20.360 --> 00:04:26.759
+một màu để liên kết với biến này, cũng như các nhãn trục x và trục y.
+
+88
+00:04:26.759 --> 00:04:33.199
+Hàm gọi các phương thức của đối tượng Axes mà chúng ta đã thấy trước đây:
+
+89
+00:04:33.199 --> 00:04:41.959
+cốt truyện, set-underscore-xlabel, set-underscore-ylabel và tick-underscore-params.
+
+92
+00:04:41.959 --> 00:04:48.800
+Sử dụng chức năng của chúng tôi, chúng tôi không phải lặp lại các cuộc gọi này và mã đơn giản hơn.
+
+95
+00:04:48.800 --> 00:04:58.680
+Trong các bài tập, bạn sẽ dần dần thực hiện chức năng của riêng mình từ đầu.
