@@ -6,7 +6,8 @@
   <summary>  
   - Day1:
   </summary>
-  <br>
+  <p align="center"> CHAPTER 1 </p> 
+ <br>
 1. biểu đồ ko có data: -⁠ ฅ^•ﻌ•^ฅ
 <p align="center">
   <img src="https://github.com/user-attachments/assets/78741f2f-4cc3-47c1-b816-a63e964de7c2" width="600"/>
