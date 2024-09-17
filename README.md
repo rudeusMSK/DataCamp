@@ -25,3 +25,43 @@ thành wả -⁠ ＜(´⌯  ̫⌯`)＞:
   <img src="https://github.com/user-attachments/assets/097a0094-6294-4b4c-9eeb-bb72cc16a30c" width="600"/>
 </p>
 </details>
+
+<details open="" align="left">
+  <summary>  
+  - Day2:
+  </summary>
+  <br>
+
+<p align="center">CHAPTER 2</p>
+
+<details lose="" align="left">
+  <summary>  
+   # Exercise 1:
+  </summary>
+<h1> Read data with a time index </h1>  
+pandas DataFrame objects can have an index denoting time, this recognized by Matplotlib for axis labeling.
+
+This exercise involves reading data `from climate_change.csv`, containing CO2 levels and temperatures recorded on the 6th of each month from 1958 to 2016, using pandas' `read_csv` function. The `parse_dates` and `index_col` arguments help set a `DateTimeIndex`.
+
+Don't forget to check out the [Matplotlib](https://res.cloudinary.com/dyd911kmh/image/upload/v1676360378/Marketing/Blog/Matplotlib_Cheat_Sheet.pdf) Cheat Sheet for a quick overview of essential concepts and methods.
+<h1> Instructions </h1> 
+
+Import the pandas library as `pd` .
+
+. Read in the data from a CSV file called `'climate_change.csv'` using `pd.read_csv`.
+. Use the `parse_dates` key-word argument to parse the `"date"` column as dates.
+. Use the `index_col` key-word argument to set the `"date"` column as the index.
+
+code:
+```python
+# Import pandas as pd
+import pandas as pd
+
+# Read the data from file using read_csv
+climate_change = pd.read_csv('climate_change.csv', parse_dates=["date"], index_col="date")
+```
+</details>
+
+
+
+</details>
