@@ -242,6 +242,7 @@ def plot_timeseries(axes, x, y, color, xlabel, ylabel):
   # Set the colors tick params for y-axis
   axes.tick_params('y', colors=color)
 ```
+
 </details>
 
 <details lose="" align="left">
@@ -285,6 +286,11 @@ plot_timeseries(ax2, climate_change.index, climate_change["relative_temp"], "red
 
 plt.show()
 ```
+
+Output:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/20a8a10e-5963-44b8-ac47-253b85b6dd6b)" width="600"/>
+</p>
 </details>
 
 <p align="center"> Annotating time-series data </p>
@@ -319,6 +325,12 @@ ax.annotate('>1 degree', xy= (pd.Timestamp('2015-10-06'), 1))
 
 plt.show()
 ```
+
+Output:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8809a64f-8ade-40c9-a1ed-156919703a1f" width="600"/>
+</p>
+
 </details>
 
 <details lose="" align="left">
@@ -365,6 +377,12 @@ ax2.annotate(">1 degree", xy=(pd.Timestamp('2015-10-06'),1), xytext=(pd.Timestam
 
 plt.show()
 ```
+
+Output:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6236a17d-504e-41c1-a80d-c8c647178be7" width="600"/>
+</p>
+
 </details>
 
 </details>
