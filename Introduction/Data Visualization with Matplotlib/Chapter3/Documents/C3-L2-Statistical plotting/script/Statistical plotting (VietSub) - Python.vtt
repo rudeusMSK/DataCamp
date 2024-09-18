@@ -1,0 +1,193 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:12.039
+Trong bài học trước, bạn đã thấy cách tạo biểu đồ so sánh các phân phối dữ liệu.
+
+2
+00:00:12.039 --> 00:00:15.480
+Làm thế nào chúng ta có thể làm cho những so sánh này chính thức hơn?
+
+5
+00:00:17.120 --> 00:00:24.359
+Biểu đồ thống kê là một tập hợp các phương pháp sử dụng trực quan để so sánh.
+
+8
+00:00:25.600 --> 00:00:31.120
+Ở đây, chúng ta sẽ xem xét hai trong số các kỹ thuật này.
+
+11
+00:00:31.120 --> 00:00:35.960
+Đầu tiên là việc sử dụng các thanh lỗi trong các biểu đồ.
+
+12
+00:00:35.960 --> 00:00:45.079
+Đây là những điểm đánh dấu bổ sung trên biểu đồ hoặc biểu đồ thanh cho chúng tôi biết điều gì đó về phân phối dữ liệu.
+
+13
+00:00:45.079 --> 00:00:51.960
+Biểu đồ, mà bạn đã thấy trong bài học trước, hiển thị toàn bộ phân phối.
+
+14
+00:00:51.960 --> 00:01:01.520
+Thay vào đó, các thanh lỗi tóm tắt phân phối dữ liệu bằng một số, chẳng hạn như độ lệch chuẩn của các giá trị.
+
+17
+00:01:01.520 --> 00:01:12.200
+Để chứng minh điều này, chúng ta sẽ sử dụng dữ liệu về chiều cao của các vận động viên đoạt huy chương trong Thế vận hội Olympic 2016.
+
+20
+00:01:12.200 --> 00:01:15.760
+Có ít nhất hai cách khác nhau để hiển thị thanh lỗi.
+
+23
+00:01:16.840 --> 00:01:21.400
+Ở đây, chúng tôi thêm thanh lỗi làm đối số cho biểu đồ thanh.
+
+25
+00:01:21.400 --> 00:01:30.079
+Mỗi lệnh gọi phương thức ax-dot-bar nhận một đối số x và một đối số y.
+
+26
+00:01:30.079 --> 00:01:34.560
+Trong trường hợp này, y là giá trị trung bình của cột "Chiều cao".
+
+27
+00:01:34.560 --> 00:01:38.840
+Đối số từ khóa yerr nhận thêm một số.
+
+28
+00:01:38.840 --> 00:01:48.079
+Trong trường hợp này, độ lệch chuẩn của cột "Chiều cao" và hiển thị cột đó dưới dạng điểm đánh dấu dọc bổ sung.
+
+31
+00:01:48.079 --> 00:01:49.879
+Đây là cốt truyện.
+
+32
+00:01:49.879 --> 00:01:53.920
+Nó rất hữu ích vì nó tóm tắt toàn bộ bản phân phối
+
+33
+00:01:53.920 --> 00:02:03.280
+mà bạn đã thấy trong biểu đồ tần số ở hai số: giá trị trung bình và độ phân tán của các giá trị, được định lượng là độ lệch chuẩn.
+
+36
+00:02:05.040 --> 00:02:08.599
+Chúng ta cũng có thể thêm các thanh lỗi vào biểu đồ đường.
+
+37
+00:02:08.599 --> 00:02:14.240
+Ví dụ: hãy xem dữ liệu thời tiết mà chúng ta đã sử dụng trong chương đầu tiên của khóa học này.
+
+40
+00:02:14.240 --> 00:02:22.079
+Để vẽ biểu đồ dữ liệu này bằng các thanh lỗi, chúng ta sẽ sử dụng phương pháp thanh lỗi Axes.
+
+41
+00:02:22.079 --> 00:02:30.039
+Giống như phương thức cốt truyện, phương thức này nhận một chuỗi các giá trị x, trong trường hợp này là cột "THÁNG",
+
+42
+00:02:30.039 --> 00:02:38.240
+và một chuỗi các giá trị y, trong trường hợp này là cột có nhiệt độ trung bình hàng tháng thông thường.
+
+43
+00:02:38.240 --> 00:02:43.960
+Ngoài ra, đối số từ khóa yerr có thể lấy cột trong dữ liệu
+
+44
+00:02:43.960 --> 00:02:48.840
+chứa độ lệch chuẩn của nhiệt độ trung bình hàng tháng.
+
+47
+00:02:49.920 --> 00:02:56.879
+Tương tự như trước đây, thao tác này thêm các điểm đánh dấu dọc vào biểu đồ, trông như thế này.
+
+50
+00:02:56.879 --> 00:03:02.599
+Kỹ thuật hiển thị thống kê thứ hai mà chúng ta sẽ xem xét là boxplot,
+
+51
+00:03:02.599 --> 00:03:08.639
+một kỹ thuật trực quan được phát minh bởi John Tukey, được cho là nhà khoa học dữ liệu đầu tiên.
+
+54
+00:03:08.639 --> 00:03:11.520
+Nó được triển khai như một phương thức của đối tượng Axes.
+
+55
+00:03:11.520 --> 00:03:15.599
+Chúng ta có thể gọi nó bằng một chuỗi các trình tự.
+
+56
+00:03:15.599 --> 00:03:20.319
+Trong trường hợp này, chúng tôi tạo một danh sách có cột "Chiều cao" chèo thuyền nam
+
+57
+00:03:20.319 --> 00:03:27.759
+và cột "Chiều cao" thể dục dụng cụ nam và chuyển danh sách đó cho phương thức.
+
+60
+00:03:27.759 --> 00:03:31.039
+Bởi vì box-plot không biết các nhãn trên mỗi
+
+61
+00:03:31.039 --> 00:03:35.800
+các biến, chúng tôi thêm biến đó một cách riêng biệt, đồng thời gắn nhãn cho trục y.
+
+64
+00:03:37.199 --> 00:03:40.520
+Cuối cùng, chúng tôi hiển thị hình, trông
+
+66
+00:03:41.159 --> 00:03:41.800
+như thế này.
+
+67
+00:03:41.800 --> 00:03:47.240
+Loại biểu đồ này cho chúng ta thấy một số điểm mốc trong mỗi phân phối.
+
+68
+00:03:47.240 --> 00:03:52.199
+Đường màu đỏ biểu thị chiều cao trung bình.
+
+69
+00:03:52.199 --> 00:03:55.879
+Các cạnh của phần hộp ở giữa cho biết
+
+70
+00:03:55.879 --> 00:04:02.560
+phạm vi liên phần tư của dữ liệu, giữa phần trăm thứ 25 và phần trăm thứ 75.
+
+71
+00:04:02.560 --> 00:04:09.800
+Râu ở cuối các thanh mỏng biểu thị một lần rưỡi
+
+72
+00:04:09.800 --> 00:04:17.519
+kích thước của phạm vi giữa các phần tư ngoài phần trăm thứ 75 và 25.
+
+73
+00:04:17.519 --> 00:04:24.000
+Điều này sẽ bao gồm khoảng 99 phần trăm phân phối nếu dữ liệu là Gaussian hoặc bình thường.
+
+74
+00:04:24.000 --> 00:04:28.639
+Các điểm xuất hiện ngoài râu là các điểm ngoại lệ.
+
+75
+00:04:28.639 --> 00:04:33.959
+Điều đó có nghĩa là chúng có giá trị lớn hơn hoặc nhỏ hơn giá trị của bạn
+
+76
+00:04:33.959 --> 00:04:38.800
+mong đợi 99 phần trăm dữ liệu trong phân phối Gaussian hoặc bình thường.
+
+77
+00:04:38.800 --> 00:04:47.680
+Ví dụ, có ba vận động viên chèo thuyền thấp bất thường trong mẫu này và một vận động viên thể dục dụng cụ cao bất thường.
+
+80
+00:04:47.680 --> 00:04:57.000
+Trong các bài tập, bạn sẽ tạo ra các hình ảnh thống kê của riêng mình.

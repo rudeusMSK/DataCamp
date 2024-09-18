@@ -1,0 +1,177 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.919
+Biểu đồ thanh cho chúng ta thấy giá trị của một biến trong các điều kiện khác nhau.
+
+2
+00:00:08.919 --> 00:00:12.400
+Bây giờ, chúng ta sẽ xem xét biểu đồ.
+
+3
+00:00:12.400 --> 00:00:21.640
+Hình ảnh trực quan này rất hữu ích vì nó cho chúng ta thấy toàn bộ phân bố của các giá trị trong một biến.
+
+6
+00:00:21.679 --> 00:00:24.320
+Hãy xem xét một ví dụ khác.
+
+7
+00:00:24.320 --> 00:00:33.039
+Trong trường hợp này, chúng tôi đang xem xét dữ liệu về các vận động viên đã tham gia Thế vận hội Olympic 2016.
+
+8
+00:00:33.039 --> 00:00:37.679
+Chúng tôi đã trích xuất hai DataFrames từ dữ liệu này: tất cả huy chương
+
+9
+00:00:37.679 --> 00:00:44.759
+người chiến thắng ở môn thể dục dụng cụ nam và tất cả những người giành huy chương ở môn chèo thuyền nam.
+
+12
+00:00:44.759 --> 00:00:50.359
+Dưới đây là năm hàng đầu tiên trong DataFrame chèo thuyền nam.
+
+13
+00:00:50.359 --> 00:00:54.359
+Bạn có thể thấy rằng dữ liệu chứa các loại thông tin khác nhau: cái gì
+
+14
+00:00:54.359 --> 00:01:02.039
+các loại huy chương mà mỗi thí sinh giành được, cũng như chiều cao và cân nặng của thí sinh.
+
+17
+00:01:02.039 --> 00:01:08.760
+Hãy bắt đầu bằng cách xem so sánh độ cao sẽ như thế nào với biểu đồ thanh.
+
+20
+00:01:08.760 --> 00:01:17.480
+Sau khi tạo các đối tượng Hình và Trục, chúng tôi thêm vào chúng một thanh có giá trị trung bình của cột "Chiều cao" của hàng.
+
+21
+00:01:17.480 --> 00:01:22.799
+Sau đó, chúng tôi thêm một thanh có giá trị trung bình của cột "Chiều cao" thể dục dụng cụ.
+
+24
+00:01:22.799 --> 00:01:31.159
+Chúng tôi đặt nhãn trục y và hiển thị hình, giúp chúng tôi hiểu được sự khác biệt giữa các nhóm.
+
+27
+00:01:31.159 --> 00:01:37.120
+Nhưng thay vào đó, một biểu đồ sẽ hiển thị phân phối đầy đủ các giá trị trong mỗi biến.
+
+30
+00:01:38.400 --> 00:01:40.359
+Hãy xem điều đó.
+
+31
+00:01:40.359 --> 00:01:45.000
+Chúng tôi bắt đầu lại bằng cách khởi tạo Hình và Trục.
+
+32
+00:01:45.000 --> 00:01:53.240
+Sau đó, chúng tôi gọi phương thức Axes hist với toàn bộ cột "Chiều cao" của Khung dữ liệu chèo thuyền nam.
+
+33
+00:01:53.240 --> 00:01:58.400
+Chúng tôi lặp lại điều này với DataFrame thể dục dụng cụ nam.
+
+36
+00:01:58.439 --> 00:02:05.280
+Trong biểu đồ được hiển thị, trục x là các giá trị trong biến và
+
+37
+00:02:05.280 --> 00:02:12.719
+chiều cao của các thanh biểu thị số lượng quan sát trong một ngăn giá trị cụ thể.
+
+40
+00:02:14.080 --> 00:02:22.039
+Ví dụ: có 12 vận động viên thể dục dụng cụ có chiều cao từ 164 đến 167
+
+41
+00:02:22.039 --> 00:02:29.120
+centimet, vì vậy thanh cao nhất trong biểu đồ màu cam cao 12 đơn vị.
+
+42
+00:02:29.120 --> 00:02:36.400
+Tương tự có 20 tay chèo có chiều cao từ 188 đến 192
+
+43
+00:02:36.400 --> 00:02:41.759
+centimet và thanh cao nhất trong biểu đồ màu xanh lam cao 20 đơn vị.
+
+46
+00:02:43.680 --> 00:02:48.560
+Bởi vì nhãn trục x không còn cung cấp thông tin về
+
+47
+00:02:48.560 --> 00:02:55.360
+màu đại diện cho biến nào, nhãn thực sự cần thiết trong biểu đồ.
+
+50
+00:02:55.360 --> 00:03:03.479
+Như trước đây, chúng ta có thể gắn nhãn một biến bằng cách gọi phương thức hist với đối số từ khóa nhãn
+
+51
+00:03:03.479 --> 00:03:10.759
+và sau đó gọi phương thức legend trước khi chúng ta gọi plt-dot-show, để chú giải xuất hiện trong hình.
+
+54
+00:03:12.800 --> 00:03:20.079
+Bạn có thể thắc mắc làm thế nào Matplotlib quyết định cách chia dữ liệu thành các thanh khác nhau.
+
+55
+00:03:20.079 --> 00:03:28.680
+Theo mặc định, số thanh hoặc thùng trong biểu đồ là 10, nhưng chúng tôi có thể tùy chỉnh số đó.
+
+58
+00:03:30.000 --> 00:03:37.840
+Nếu chúng tôi cung cấp một số nguyên cho đối số từ khóa thùng, thì biểu đồ sẽ có số lượng thùng đó.
+
+61
+00:03:37.840 --> 00:03:43.680
+Thay vào đó, nếu chúng tôi cung cấp một chuỗi các giá trị, những con số này
+
+62
+00:03:43.680 --> 00:03:48.159
+sẽ được đặt làm ranh giới giữa các thùng, như được hiển thị ở đây.
+
+65
+00:03:48.159 --> 00:03:52.920
+Có một điều cuối cùng để tùy chỉnh.
+
+66
+00:03:52.920 --> 00:03:56.560
+Nhìn vào con số này, bạn có thể tự hỏi liệu có
+
+67
+00:03:56.560 --> 00:04:01.639
+bất kỳ vận động viên chèo thuyền nào có chiều cao dưới 1m80.
+
+68
+00:04:01.639 --> 00:04:09.120
+Điều này rất khó nói vì các thanh biểu đồ thể dục dụng cụ đang che khuất thông tin này.
+
+71
+00:04:09.120 --> 00:04:16.879
+Có thể loại bỏ tắc nghẽn bằng cách thay đổi loại biểu đồ được sử dụng.
+
+72
+00:04:16.879 --> 00:04:26.319
+Thay vì loại "thanh" được sử dụng theo mặc định, bạn có thể chỉ định loại biểu đồ "bước", hiển thị
+
+73
+00:04:26.319 --> 00:04:29.519
+biểu đồ dưới dạng các đường mảnh, thay vì liền mạch
+
+74
+00:04:29.519 --> 00:04:29.920
+thanh,
+
+76
+00:04:29.920 --> 00:04:37.720
+tiết lộ rằng có: có những tay chèo cao dưới 1m80.
+
+79
+00:04:37.720 --> 00:04:46.720
+Trong các bài tập tiếp theo, bạn sẽ tạo biểu đồ của riêng mình.

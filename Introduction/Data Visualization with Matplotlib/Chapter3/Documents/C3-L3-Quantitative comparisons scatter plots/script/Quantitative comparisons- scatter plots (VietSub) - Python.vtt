@@ -1,0 +1,177 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.480
+Biểu đồ thanh cho chúng ta thấy các giá trị của một biến trong các điều kiện khác nhau, chẳng hạn như các quốc gia khác nhau.
+
+4
+00:00:10.679 --> 00:00:17.640
+Nhưng nếu bạn muốn so sánh giá trị của các biến khác nhau giữa các quan sát thì sao?
+
+7
+00:00:17.640 --> 00:00:26.440
+Điều này đôi khi được gọi là so sánh hai biến, bởi vì nó liên quan đến các giá trị của hai biến khác nhau.
+
+10
+00:00:26.440 --> 00:00:32.640
+Một trực quan tiêu chuẩn để so sánh hai biến số là một biểu đồ phân tán.
+
+11
+00:00:32.640 --> 00:00:35.159
+Hãy xem một ví dụ.
+
+14
+00:00:35.159 --> 00:00:40.320
+Chúng tôi sẽ sử dụng dữ liệu biến đổi khí hậu mà chúng tôi đã sử dụng trước đây.
+
+15
+00:00:40.320 --> 00:00:44.520
+Nhớ lại rằng bộ dữ liệu này có một cột với các phép đo lượng carbon
+
+16
+00:00:44.520 --> 00:00:50.960
+dioxit và một cột có phép đo đồng thời nhiệt độ tương đối.
+
+19
+00:00:50.960 --> 00:00:55.240
+Bởi vì các phép đo này được ghép nối theo cách này, chúng ta có thể biểu diễn từng
+
+20
+00:00:55.240 --> 00:01:00.320
+phép đo dưới dạng một điểm, với khoảng cách dọc theo trục x biểu thị
+
+21
+00:01:00.320 --> 00:01:06.480
+phép đo trong một cột và chiều cao trên trục y biểu thị phép đo trong cột kia.
+
+24
+00:01:06.480 --> 00:01:16.640
+Để tạo biểu đồ này, chúng tôi khởi tạo một đối tượng Hình và Trục và gọi phương thức phân tán Trục.
+
+25
+00:01:16.640 --> 00:01:21.719
+Đối số đầu tiên của phương thức này sẽ tương ứng với khoảng cách dọc theo
+
+26
+00:01:21.719 --> 00:01:29.079
+trục x và đối số thứ hai sẽ tương ứng với chiều cao dọc theo trục y.
+
+27
+00:01:29.079 --> 00:01:33.000
+Chúng tôi cũng đặt nhãn trục x và trục y,
+
+28
+00:01:33.000 --> 00:01:39.520
+để chúng tôi có thể biết cách diễn giải cốt truyện và gọi plt-dot-show để hiển thị hình.
+
+31
+00:01:41.840 --> 00:01:50.560
+Chúng tôi có thể tùy chỉnh các biểu đồ phân tán theo cách tương tự như tùy chỉnh mà chúng tôi đã giới thiệu trong các biểu đồ khác.
+
+34
+00:01:50.560 --> 00:01:55.640
+Ví dụ: nếu chúng ta muốn hiển thị hai phép so sánh hai chiều
+
+35
+00:01:55.640 --> 00:02:00.840
+cạnh nhau, chúng tôi muốn đảm bảo rằng chúng khác biệt về mặt hình ảnh.
+
+38
+00:02:02.280 --> 00:02:08.039
+Ở đây, chúng ta sẽ vẽ hai biểu đồ phân tán trên cùng một trục.
+
+39
+00:02:08.039 --> 00:02:12.280
+Trong một, chúng tôi sẽ hiển thị dữ liệu từ những năm 1980 và
+
+40
+00:02:12.280 --> 00:02:17.560
+mặt khác, chúng tôi sẽ hiển thị dữ liệu từ những năm 1990.
+
+41
+00:02:17.560 --> 00:02:22.920
+Chúng ta có thể chọn những phần dữ liệu này bằng cách sử dụng chỉ mục chuỗi thời gian
+
+42
+00:02:22.920 --> 00:02:28.759
+mà bạn đã thấy trước đây để tạo hai DataFrames được gọi là thập niên tám mươi và chín mươi.
+
+45
+00:02:28.759 --> 00:02:36.520
+Sau đó, chúng tôi thêm từng DataFrames này vào đối tượng Axes.
+
+46
+00:02:36.520 --> 00:02:39.560
+Đầu tiên, chúng tôi thêm dữ liệu từ những năm tám mươi.
+
+47
+00:02:39.560 --> 00:02:49.240
+Chúng tôi thêm tùy chỉnh: chúng tôi đặt màu của các điểm thành màu đỏ và chúng tôi gắn nhãn những dữ liệu này bằng chuỗi "tám mươi".
+
+48
+00:02:49.240 --> 00:02:52.199
+Sau đó, chúng tôi thêm dữ liệu từ những năm chín mươi.
+
+49
+00:02:52.199 --> 00:02:58.039
+Những điểm này sẽ có màu xanh lam và chúng tôi đánh dấu chúng bằng chuỗi "nineties".
+
+52
+00:02:59.360 --> 00:03:03.639
+Chúng tôi gọi phương thức legend để thêm một chú thích sẽ cho chúng tôi biết
+
+53
+00:03:03.639 --> 00:03:10.639
+DataFrame được xác định bằng màu nào, chúng tôi thêm các nhãn trục và gọi plt-dot-show.
+
+56
+00:03:12.159 --> 00:03:14.879
+Đây là những gì con số này trông giống như.
+
+57
+00:03:14.879 --> 00:03:21.400
+Bạn có thể thấy rằng mối quan hệ giữa nhiệt độ và carbon dioxide không thay đổi nhiều
+
+58
+00:03:21.400 --> 00:03:29.520
+trong những năm này, nhưng cả mức độ carbon dioxide và nhiệt độ vẫn tiếp tục tăng trong những năm chín mươi.
+
+61
+00:03:29.520 --> 00:03:35.599
+Màu sắc có thể được sử dụng để so sánh, như chúng ta đã làm ở đây.
+
+64
+00:03:35.639 --> 00:03:39.159
+Nhưng chúng ta cũng có thể sử dụng màu của các điểm để mã hóa một phần ba
+
+65
+00:03:39.159 --> 00:03:44.520
+biến, cung cấp thông tin bổ sung về so sánh.
+
+66
+00:03:44.520 --> 00:03:52.599
+Trong dữ liệu biến đổi khí hậu, chúng tôi có một biến liên tục biểu thị thời gian được lưu trữ trong chỉ mục DataFrame.
+
+69
+00:03:54.079 --> 00:04:01.960
+Nếu chúng ta nhập chỉ mục làm đầu vào cho đối số từ khóa c, biến này sẽ được mã hóa dưới dạng màu.
+
+70
+00:04:01.960 --> 00:04:10.120
+Lưu ý rằng đây không phải là đối số từ khóa màu mà chúng ta đã sử dụng trước đây, mà thay vào đó chỉ là chữ cái c.
+
+73
+00:04:11.960 --> 00:04:16.399
+Như trước đây, chúng tôi đặt nhãn trục và gọi plt-dot-show.
+
+76
+00:04:16.399 --> 00:04:23.199
+Giờ đây, thời gian của các phép đo được mã hóa theo độ sáng của màu
+
+77
+00:04:23.199 --> 00:04:30.759
+áp dụng cho các điểm, với các điểm ban đầu màu xanh đậm và các điểm sau đó có màu vàng sáng.
+
+80
+00:04:32.000 --> 00:04:40.040
+Trong các bài tập, hãy tiếp tục và thực hành tạo các biểu đồ phân tán của riêng bạn.
