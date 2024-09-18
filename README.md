@@ -104,6 +104,11 @@ ax.set_ylabel('Relative temperature (Celsius)')
 # Show the figure
 plt.show()
 ```
+Output:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/10ec765e-3616-4848-b833-8f5728f3b218" width="600"/>
+</p>
+
 </details>
 
 <details lose="" align="left">
@@ -141,6 +146,11 @@ ax.plot(seventies.index, seventies["co2"])
 # Show the figure
 plt.show()
 ```
+Output:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0f72fbdd-855e-4d86-a6dc-ae1032b97590" width="600"/>
+</p>
+
 </details>
 
 
@@ -189,6 +199,10 @@ ax2.plot(climate_change.index, climate_change["relative_temp"], color='red')
 
 plt.show()
 ```
+Output:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/03be6a42-2dcc-4e65-9603-0ff5e1e13b60" width="600"/>
+</p>
 </details>
 
 <details lose="" align="left">
