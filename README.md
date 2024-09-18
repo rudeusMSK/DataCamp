@@ -28,7 +28,7 @@ thành wả -⁠ ＜(´⌯  ̫⌯`)＞:
 </p>
 </details>
 
-<details open="" align="left">
+<details lose="" align="left">
   <summary>  
   - Day2:
   </summary>
