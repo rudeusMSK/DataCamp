@@ -795,7 +795,7 @@ plt.show()
 
 Output:
 <p align="center">
-  <img src="!https://github.com/user-attachments/assets/e385f91b-f0f1-46bd-b48d-bf6655395684" width="600"/>
+  <img src="https://github.com/user-attachments/assets/e385f91b-f0f1-46bd-b48d-bf6655395684" width="600"/>
 </p>
 
 </details>
