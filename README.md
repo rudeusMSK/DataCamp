@@ -289,7 +289,7 @@ plt.show()
 
 Output:
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/20a8a10e-5963-44b8-ac47-253b85b6dd6b)" width="600"/>
+  <img src="https://github.com/user-attachments/assets/20a8a10e-5963-44b8-ac47-253b85b6dd6b" width="600"/>
 </p>
 </details>
 
