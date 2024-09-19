@@ -714,5 +714,93 @@ Output:
 
 
 
+<p align="center"> Quantitative comparisons: scatter plots </p>
+ <details lose="" align="left">
+  <summary>  
+   # Exercise 1:
+  </summary>
+  
+<h1> Simple scatter plot </h1>  
+
+Scatter are a bi-variate visualization technique. They plot each record in the data as a point. The location of each point is determined by the value of two variables: the first variable determines the distance along the x-axis and the second variable determines the height along the y-axis.
+
+In this exercise, you will create a scatter plot of the climate_change data. This DataFrame, which is already loaded, has a column "co2" that indicates the measurements of carbon dioxide every month and another column, "relative_temp" that indicates the temperature measured at the same time.
+
+<h1> Instructions </h1> 
+
+.Using the ax.scatter method, add the data to the plot: "co2" on the x-axis and "relative_temp" on the y-axis.
+
+.Set the x-axis label to "CO2 (ppm)".
+
+.Set the y-axis label to "Relative temperature (C)".
+
+code:
+```python
+fig, ax = plt.subplots()
+
+# Add data: "co2" on x-axis, "relative_temp" on y-axis
+ax.scatter(climate_change["co2"], climate_change["relative_temp"])
+
+# Set the x-axis label to "CO2 (ppm)"
+ax.set_xlabel("CO2 (ppm)")
+
+# Set the y-axis label to "Relative temperature (C)"
+ax.set_ylabel("Relative temperature (C)")
+
+plt.show()
+```
+
+Output:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d51faf31-d463-4ba1-85c5-48fb72d7df5d" width="600"/>
+</p>
+
+</details>
+
+
+
+
+<details lose="" align="left">
+  <summary>  
+   # Exercise 2:
+  </summary>
+  
+<h1> Encoding time by color </h1>  
+
+The screen only has two dimensions, but we can encode another dimension in the scatter plot using color. Here, we will visualize the climate_change dataset, plotting a scatter plot of the "co2" column, on the x-axis, against the "relative_temp" column, on the y-axis. We will encode time using the color dimension, with earlier times appearing as darker shades of blue and later times appearing as brighter shades of yellow.
+
+<h1> Instructions </h1> 
+
+. Using the ax.scatter method add a scatter plot of the "co2" column (x-axis) against the "relative_temp" column.
+
+. Use the c key-word argument to pass in the index of the DataFrame as input to color each point according to its date.
+
+. Set the x-axis label to "CO2 (ppm)" and the y-axis label to "Relative temperature (C)".
+
+code:
+```python
+fig, ax = plt.subplots()
+
+# Add data: "co2", "relative_temp" as x-y, index as color
+ax.scatter(climate_change["co2"], climate_change["relative_temp"], c=climate_change.index)
+
+# Set the x-axis label to "CO2 (ppm)"
+ax.set_xlabel("CO2 (ppm)")
+
+# Set the y-axis label to "Relative temperature (C)"
+ax.set_ylabel("Relative temperature (C)")
+
+plt.show()
+```
+
+Output:
+<p align="center">
+  <img src="!https://github.com/user-attachments/assets/e385f91b-f0f1-46bd-b48d-bf6655395684" width="600"/>
+</p>
+
+</details>
+
+
+
 
 </details>
